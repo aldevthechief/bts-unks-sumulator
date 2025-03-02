@@ -45,6 +45,14 @@ public class RaycastReflection : MonoBehaviour
 				line.positionCount = ++point_count;    
 				line.SetPosition(i + 1, hit.point);
 			}
+			else
+			{
+				if(i == 0)
+				{
+					line.positionCount = ++point_count;    
+					line.SetPosition(i + 1, transform.position - Vector3.forward * 10);
+				}
+			}
 		}
 	}
 }
